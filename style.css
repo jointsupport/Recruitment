@@ -1,0 +1,345 @@
+@font-face {
+    font-family: "DIN";
+    src: url("DINNextLTArabic-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DIN", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    direction: rtl;
+    color: #ffffff;
+    background:
+        linear-gradient(rgba(22, 22, 20, 0.48), rgba(22, 22, 20, 0.62)),
+        url("support-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 28px 18px 45px;
+}
+
+.application-page {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.top-header {
+    display: grid;
+    grid-template-columns: 175px 1fr 175px;
+    align-items: center;
+    gap: 22px;
+    padding: 12px 10px 24px;
+    margin-bottom: 26px;
+    border-bottom: 1px solid rgba(218, 181, 93, 0.7);
+}
+
+.logo-box {
+    min-height: 185px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-logo {
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 9px rgba(0, 0, 0, 0.48));
+}
+
+.support-logo {
+    width: 125px;
+    height: 125px;
+}
+
+.ministry-logo {
+    width: 135px;
+    height: 135px;
+}
+
+.logo-title {
+    margin-top: 10px;
+    text-align: center;
+    line-height: 1.35;
+}
+
+.arabic-title,
+.english-title {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.arabic-title {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.english-title {
+    margin-top: 2px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    direction: ltr;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    margin-bottom: 9px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 400;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.95);
+}
+
+.header-content p {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.intro-section {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto 28px;
+    padding: 20px 24px;
+    text-align: center;
+    background: rgba(25, 25, 23, 0.38);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 17px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.intro-section h2 {
+    margin-bottom: 11px;
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.intro-section ul {
+    list-style: none;
+}
+
+.intro-section li {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.95;
+}
+
+.intro-section li::before {
+    content: "•";
+    color: #d8b458;
+    margin-left: 8px;
+}
+
+.form-card {
+    width: 100%;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.27);
+    border-radius: 23px;
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+}
+
+#registrationForm {
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.field-icon {
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 19px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.form-group input:not([type="checkbox"]),
+.form-group select {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 62px;
+    margin: 0;
+    padding: 0 58px 0 18px;
+    border: 1.5px solid rgba(206, 71, 49, 0.96);
+    border-radius: 15px;
+    background: rgba(31, 31, 29, 0.54);
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input:not([type="checkbox"])::placeholder {
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: #3c3932;
+    color: #ffffff;
+}
+
+.form-group input:not([type="checkbox"]):focus,
+.form-group select:focus {
+    border-color: #e0bb5f;
+    box-shadow: 0 0 0 4px rgba(224, 187, 95, 0.15);
+}
+
+.agreement-box {
+    width: 100%;
+    margin: 28px 0 24px;
+    padding: 20px 22px;
+    background: rgba(30, 30, 28, 0.38);
+    border: 1px solid rgba(215, 179, 93, 0.36);
+    border-radius: 16px;
+}
+
+.agreement-title {
+    margin-bottom: 14px;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.checkbox-row {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+.checkbox-row input[type="checkbox"] {
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    padding: 0;
+    accent-color: #caa344;
+    cursor: pointer;
+}
+
+.submit-button {
+    width: 100%;
+    height: 64px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #b80008, #850004);
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    filter: brightness(1.08);
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 13px 9px 28px;
+        background-attachment: scroll;
+    }
+
+    .top-header {
+        grid-template-columns: 92px 1fr 92px;
+        gap: 6px;
+    }
+
+    .logo-box {
+        min-height: 125px;
+    }
+
+    .support-logo {
+        width: 76px;
+        height: 76px;
+    }
+
+    .ministry-logo {
+        width: 82px;
+        height: 82px;
+    }
+
+    .arabic-title {
+        font-size: 10px;
+    }
+
+    .english-title {
+        font-size: 7px;
+    }
+
+    .header-content h1 {
+        font-size: 24px;
+    }
+
+    .header-content p {
+        font-size: 13px;
+    }
+
+    .form-card {
+        padding: 22px 15px;
+    }
+
+    .form-group input:not([type="checkbox"]),
+    .form-group select {
+        height: 57px;
+        font-size: 14px;
+    }
+}
