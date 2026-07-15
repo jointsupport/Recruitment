@@ -1,0 +1,464 @@
+@font-face {
+    font-family: "DIN";
+    src: url("DINNextLTArabic-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    direction: rtl;
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(22, 22, 20, 0.48),
+            rgba(22, 22, 20, 0.62)
+        ),
+        url("support-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    padding: 28px 18px 45px;
+}
+
+button,
+input,
+select,
+option,
+label {
+    font-family: "DIN", Arial, sans-serif;
+}
+
+/* الصفحة */
+.application-page {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* الهيدر */
+.top-header {
+    display: grid;
+    grid-template-columns: 175px 1fr 175px;
+    align-items: center;
+    gap: 22px;
+    padding: 12px 10px 24px;
+    margin-bottom: 26px;
+    border-bottom: 1px solid rgba(218, 181, 93, 0.7);
+}
+
+.logo-box {
+    min-height: 185px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-logo {
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 9px rgba(0, 0, 0, 0.48));
+}
+
+.support-logo {
+    width: 125px;
+    height: 125px;
+}
+
+.ministry-logo {
+    width: 135px;
+    height: 135px;
+}
+
+.logo-title {
+    margin-top: 10px;
+    text-align: center;
+    line-height: 1.35;
+}
+
+.arabic-title,
+.english-title {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.arabic-title {
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.english-title {
+    margin-top: 2px;
+    direction: ltr;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    margin-bottom: 9px;
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.95);
+}
+
+.header-content p {
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* شروط التقديم */
+.intro-section {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto 28px;
+    padding: 20px 24px;
+    text-align: center;
+    background: rgba(25, 25, 23, 0.38);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+    border-radius: 17px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.intro-section h2 {
+    margin-bottom: 11px;
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.requirements-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: right;
+    list-style: none;
+}
+
+.requirements-list li {
+    position: relative;
+    width: 100%;
+    margin-bottom: 8px;
+    padding-right: 18px;
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.95;
+    text-align: right;
+}
+
+.requirements-list li::before {
+    content: "•";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #d8b458;
+}
+
+/* بطاقة النموذج */
+.form-card {
+    width: 100%;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.27);
+    border-radius: 23px;
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+}
+
+#registrationForm {
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: right;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* جميع الخانات والقوائم */
+.form-group input:not([type="checkbox"]),
+.form-group select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 62px;
+    margin: 0;
+    padding: 0 18px;
+    direction: rtl;
+    text-align: right;
+    border: 1.5px solid rgba(206, 71, 49, 0.96);
+    border-radius: 15px;
+    background: rgba(31, 31, 29, 0.54);
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* النص داخل الخانات يبدأ من اليمين */
+.form-group input::placeholder {
+    direction: rtl;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.62);
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* القوائم المنسدلة */
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    direction: rtl;
+    text-align: right;
+    background: #3c3932;
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* عند الضغط على الخانة */
+.form-group input:not([type="checkbox"]):focus,
+.form-group select:focus {
+    border-color: #e0bb5f;
+    box-shadow: 0 0 0 4px rgba(224, 187, 95, 0.15);
+}
+
+/* مربع الإقرار */
+.agreement-box {
+    width: 100%;
+    margin: 28px 0 24px;
+    padding: 20px 22px;
+    background: rgba(30, 30, 28, 0.38);
+    border: 1px solid rgba(215, 179, 93, 0.36);
+    border-radius: 16px;
+}
+
+.agreement-title {
+    margin-bottom: 14px;
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.checkbox-row {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+.checkbox-row input[type="checkbox"] {
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    padding: 0;
+    accent-color: #caa344;
+    cursor: pointer;
+}
+
+/* زر الإرسال */
+.submit-button {
+    width: 100%;
+    height: 64px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #b80008, #850004);
+    color: #ffffff;
+    font-family: "DIN", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    filter: brightness(1.08);
+}
+
+/* تنسيق تقويم تاريخ الميلاد */
+.flatpickr-calendar {
+    font-family: "DIN", Arial, sans-serif;
+    border-radius: 14px;
+}
+
+.flatpickr-day.selected {
+    background: #b80008;
+    border-color: #b80008;
+}
+
+.flatpickr-day:hover {
+    background: rgba(184, 0, 8, 0.15);
+}
+
+/* تثبيت عرض خانة تاريخ الميلاد */
+#birthDate,
+.flatpickr-input {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 62px;
+    margin: 0 !important;
+    padding: 0 18px !important;
+    box-sizing: border-box !important;
+    direction: rtl;
+    text-align: right;
+    cursor: pointer;
+}
+
+/* الجوال */
+@media (max-width: 700px) {
+    body {
+        padding: 13px 9px 28px;
+        background-attachment: scroll;
+    }
+
+    .top-header {
+        grid-template-columns: 92px 1fr 92px;
+        gap: 6px;
+    }
+
+    .logo-box {
+        min-height: 125px;
+    }
+
+    .support-logo {
+        width: 76px;
+        height: 76px;
+    }
+
+    .ministry-logo {
+        width: 82px;
+        height: 82px;
+    }
+
+    .arabic-title {
+        font-size: 10px;
+    }
+
+    .english-title {
+        font-size: 7px;
+    }
+
+    .header-content h1 {
+        font-size: 24px;
+    }
+
+    .header-content p {
+        font-size: 13px;
+    }
+
+    .intro-section {
+        padding: 18px 16px;
+    }
+
+    .intro-section h2 {
+        font-size: 23px;
+    }
+
+    .requirements-list li {
+        padding-right: 17px;
+        font-size: 14px;
+    }
+
+    .form-card {
+        padding: 22px 15px;
+    }
+
+    .input-wrapper {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .form-group input:not([type="checkbox"]),
+    .form-group select {
+        height: 57px;
+        padding: 0 16px;
+        font-size: 14px;
+    }
+
+    .form-group input::placeholder,
+    .form-group select option {
+        font-size: 14px;
+    }
+
+    #birthDate,
+    .flatpickr-input {
+        display: block !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        height: 57px !important;
+        margin: 0 !important;
+        padding: 0 16px !important;
+        box-sizing: border-box !important;
+    }
+}
