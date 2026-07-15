@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسجيل للراغبين في العمل</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <main class="application-page">
+        <header class="top-header">
+            <div class="logo-box">
+                <img src="logo-right.png" class="top-logo support-logo" alt="شعار الإسناد المشترك">
+                <div class="logo-title">
+                    <span class="arabic-title">الإسناد المشترك</span>
+                    <span class="english-title">JOINT SUPPORT</span>
+                </div>
+            </div>
+
+            <div class="header-content">
+                <h1>انضم إلينا</h1>
+                <p>التسجيل للراغبين في العمل</p>
+            </div>
+
+            <div class="logo-box">
+                <img src="logo-left.png" class="top-logo ministry-logo" alt="شعار وزارة الدفاع">
+                <div class="logo-title">
+                    <span class="arabic-title">وزارة الدفاع</span>
+                    <span class="english-title">MINISTRY OF DEFENCE</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="intro-section">
+            <h2>شروط التقديم</h2>
+            <ul class="requirements-list">
+                <li>أن يكون المتقدم من مواطني دولة الإمارات العربية المتحدة.</li>
+                <li>أن يكون لائقاً طبياً.</li>
+                <li>أن يكون حسن السيرة والسلوك.</li>
+                <li>ألّا يقل العمر عن (18) عاماً، ولا يزيد على (30) عاماً.</li>
+                <li>ألّا يقل الطول عن (160) سم.</li>
+            </ul>
+        </section>
+
+        <section class="form-card">
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="fullName">الاسم *</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="fullName" name="fullName" placeholder="أدخل الاسم الثلاثي والقبيلة" autocomplete="name" required>
+                    </div>
+                </div>
+<!-- الجنس -->
+<div class="form-group">
+
+    <label for="gender">
+        الجنس *
+    </label>
+
+    <div class="input-wrapper">
+
+        <select
+            id="gender"
+            name="gender"
+            required
+        >
+            <option value="" selected disabled>
+                اختر الجنس
+            </option>
+
+            <option value="ذكر">
+                ذكر
+            </option>
+
+            <option value="أنثى">
+                أنثى
+            </option>
+
+        </select>
+
+    </div>
+
+</div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف *</label>
+                    <div class="input-wrapper">
+                        <input type="tel" id="phone" name="phone" inputmode="numeric" autocomplete="tel" maxlength="10" pattern="05[0-9]{8}" title="يجب أن يبدأ رقم الهاتف بـ 05 ويتكون من 10 أرقام" placeholder="05XXXXXXXX" required>
+                    </div>
+                </div>
+<!-- البريد الإلكتروني -->
+<div class="form-group">
+
+    <label for="email">
+        البريد الإلكتروني *
+    </label>
+
+    <div class="input-wrapper">
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            autocomplete="email"
+            required
+        >
+
+    </div>
+
+</div>
+                <div class="form-group">
+                    <label for="emiratesId">رقم الهوية الإماراتية *</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="emiratesId" name="emiratesId" inputmode="numeric" minlength="15" maxlength="15" pattern="[0-9]{15}" title="يجب أن يتكون رقم الهوية من 15 رقماً" placeholder="784XXXXXXXXXXXX" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthDate">تاريخ الميلاد *</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="birthDate" name="birthDate" placeholder="اختر تاريخ الميلاد" readonly required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="emirate">الإمارة</label>
+                    <div class="input-wrapper">
+                        <select id="emirate" name="emirate">
+                            <option value="" selected disabled>اختر الإمارة</option>
+                            <option value="أبوظبي">أبوظبي</option>
+                            <option value="دبي">دبي</option>
+                            <option value="الشارقة">الشارقة</option>
+                            <option value="عجمان">عجمان</option>
+                            <option value="أم القيوين">أم القيوين</option>
+                            <option value="رأس الخيمة">رأس الخيمة</option>
+                            <option value="الفجيرة">الفجيرة</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- نوع التوظيف -->
+<div class="form-group">
+
+    <label for="employmentType">
+        نوع التوظيف *
+    </label>
+
+    <div class="input-wrapper">
+
+        <select
+            id="employmentType"
+            name="employmentType"
+            required
+        >
+            <option value="" selected disabled>
+                اختر نوع التوظيف
+            </option>
+
+            <option value="عسكري">
+                عسكري
+            </option>
+
+            <option value="مدني">
+                مدني
+            </option>
+
+        </select>
+
+    </div>
+
+</div>
+<!-- إنهاء الخدمة الوطنية -->
+<div class="form-group">
+
+    <label for="nationalService">
+        هل أنهيت الخدمة الوطنية؟ *
+    </label>
+
+    <div class="input-wrapper">
+
+        <select
+            id="nationalService"
+            name="nationalService"
+            required
+        >
+            <option value="" selected disabled>
+                اختر الإجابة
+            </option>
+
+            <option value="نعم">
+                نعم
+            </option>
+
+            <option value="لا">
+                لا
+            </option>
+
+        </select>
+
+    </div>
+
+</div>
+                <div class="form-group">
+                    <label for="medicalGrade">الدرجة الطبية</label>
+                    <div class="input-wrapper">
+                        <select id="medicalGrade" name="medicalGrade">
+                            <option value="" selected disabled>اختر الدرجة الطبية</option>
+                            <option value="الدرجة الأولى">الدرجة الأولى</option>
+                            <option value="الدرجة الثانية">الدرجة الثانية</option>
+                            <option value="الدرجة الثالثة">الدرجة الثالثة</option>
+                            <option value="الدرجة الرابعة">الدرجة الرابعة</option>
+                            <option value="الدرجة الخامسة">الدرجة الخامسة</option>
+                            <option value="الدرجة السادسة">الدرجة السادسة</option>
+                            <option value="لا ينطبق">لا ينطبق</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="qualification">المؤهل العلمي</label>
+                    <div class="input-wrapper">
+                        <select id="qualification" name="qualification">
+                            <option value="" selected disabled>اختر المؤهل العلمي</option>
+                            <option value="إعدادي">إعدادي</option>
+                            <option value="ثانوي">ثانوي</option>
+                            <option value="دبلوم">دبلوم</option>
+                            <option value="بكالوريوس">بكالوريوس</option>
+                            <option value="ماجستير">ماجستير</option>
+                            <option value="دكتوراه">دكتوراه</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- الوظيفة المرغوبة -->
+<div class="form-group">
+
+    <label for="desiredJob">
+        الوظيفة المرغوبة *
+    </label>
+
+    <div class="input-wrapper">
+
+        <select
+            id="desiredJob"
+            name="desiredJob"
+            required
+        >
+            <option value="" selected disabled>
+                اختر الوظيفة المرغوبة
+            </option>
+
+            <option value="طبيب">طبيب</option>
+            <option value="مسعف">مسعف</option>
+            <option value="مهندس">مهندس</option>
+            <option value="ممرض">ممرض</option>
+            <option value="فني ميكانيكي">فني ميكانيكي</option>
+            <option value="فني كهربائي">فني كهربائي</option>
+            <option value="فني إلكترونيات">فني إلكترونيات</option>
+            <option value="سائق">سائق</option>
+            <option value="فني شبكات بصرية">فني شبكات بصرية</option>
+            <option value="خازن فني">خازن فني</option>
+        </select>
+
+    </div>
+
+</div>
+                <!-- هل سبق لك العمل -->
+<div class="form-group">
+
+    <label for="workExperience">
+        هل سبق لك العمل؟ *
+    </label>
+
+    <div class="input-wrapper">
+
+        <select
+            id="workExperience"
+            name="workExperience"
+            required
+        >
+            <option value="" selected disabled>اختر الإجابة</option>
+            <option value="نعم">نعم</option>
+            <option value="لا">لا</option>
+        </select>
+
+    </div>
+
+</div>
+
+<!-- عدد سنوات الخبرة -->
+<div
+    class="form-group"
+    id="experienceGroup"
+    style="display:none;"
+>
+
+    <label for="experienceYears">
+        عدد سنوات الخبرة *
+    </label>
+
+    <div class="input-wrapper">
+
+        <input
+            type="number"
+            id="experienceYears"
+            name="experienceYears"
+            min="1"
+            max="40"
+            placeholder="مثال: 5"
+        >
+
+    </div>
+
+</div>
+<!-- مرفق الهوية الإماراتية -->
+<div class="form-group">
+    <label for="emiratesIdAttachment">
+        مرفق الهوية الإماراتية *
+    </label>
+
+    <div class="input-wrapper">
+        <input
+            type="file"
+            id="emiratesIdAttachment"
+            name="emiratesIdAttachment"
+            accept=".pdf,.jpg,.jpeg,.png"
+            required
+        >
+    </div>
+</div>
+
+<!-- مرفق جواز السفر -->
+<div class="form-group">
+    <label for="passportAttachment">
+        مرفق جواز السفر *
+    </label>
+
+    <div class="input-wrapper">
+        <input
+            type="file"
+            id="passportAttachment"
+            name="passportAttachment"
+            accept=".pdf,.jpg,.jpeg,.png"
+            required
+        >
+    </div>
+</div>
+
+<!-- مرفق الشهادة العلمية -->
+<div class="form-group">
+    <label for="qualificationAttachment">
+        مرفق الشهادة العلمية *
+    </label>
+
+    <div class="input-wrapper">
+        <input
+            type="file"
+            id="qualificationAttachment"
+            name="qualificationAttachment"
+            accept=".pdf,.jpg,.jpeg,.png"
+            required
+        >
+    </div>
+</div>
+                <div class="agreement-box">
+                    <h3 class="agreement-title">شروط الانضمام</h3>
+                    <label class="checkbox-row">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <span>أقر بأن جميع البيانات المدخلة صحيحة، وأوافق على شروط التقديم المذكورة أعلاه.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-button">إرسال الطلب</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("registrationForm");
+            const phoneInput = document.getElementById("phone");
+            const emiratesIdInput = document.getElementById("emiratesId");
+            const birthDateInput = document.getElementById("birthDate");
+            const submitButton = document.querySelector(".submit-button");
+
+            const scriptURL = "https://script.google.com/macros/s/AKfycbzjyNbhCwbyN7XiMrR_BRdWz5SSsiuByjaaZdDOqP8GYPtmIBCvVt2mZKtD9jzKRf2A/exec";
+
+            const workExperience = document.getElementById("workExperience");
+            const experienceGroup = document.getElementById("experienceGroup");
+            const experienceYears = document.getElementById("experienceYears");
+
+            if (workExperience) {
+                workExperience.addEventListener("change", function () {
+                    if (this.value === "نعم") {
+                        experienceGroup.style.display = "block";
+                        experienceYears.required = true;
+                    } else {
+                        experienceGroup.style.display = "none";
+                        experienceYears.required = false;
+                        experienceYears.value = "";
+                    }
+                });
+            }
+
+
+            phoneInput.addEventListener("input", function () {
+                this.value = this.value.replace(/[^0-9]/g, "").slice(0, 10);
+            });
+
+            emiratesIdInput.addEventListener("input", function () {
+                this.value = this.value.replace(/[^0-9]/g, "").slice(0, 15);
+            });
+
+            const today = new Date();
+            const minDate = new Date(today.getFullYear() - 30, today.getMonth(), today.getDate());
+            const maxDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+
+            flatpickr("#birthDate", {
+                dateFormat: "d/m/Y",
+                disableMobile: true,
+                minDate: minDate,
+                maxDate: maxDate
+            });
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+
+                submitButton.disabled = true;
+                submitButton.textContent = "جاري إرسال الطلب...";
+
+                const formData = new FormData(form);
+                formData.set("gender", document.getElementById("gender").value);
+                formData.set("email", document.getElementById("email").value);
+                formData.set("employmentType", document.getElementById("employmentType").value);
+                formData.set("nationalService", document.getElementById("nationalService").value);
+                formData.set("desiredJob", document.getElementById("desiredJob").value);
+                formData.set("workExperience", document.getElementById("workExperience").value);
+                formData.set("experienceYears", document.getElementById("experienceYears").value);
+
+                formData.set("agreement", document.getElementById("agreement").checked ? "موافق" : "غير موافق");
+
+                fetch(scriptURL, {
+                    method: "POST",
+                    body: formData,
+                    mode: "no-cors"
+                })
+                .then(function () {
+                    alert("تم إرسال الطلب بنجاح.");
+                    form.reset();
+
+                    if (birthDateInput._flatpickr) {
+                        birthDateInput._flatpickr.clear();
+                    }
+                })
+                .catch(function (error) {
+                    console.error("خطأ في الإرسال:", error);
+                    alert("تعذر إرسال الطلب، يرجى المحاولة مرة أخرى.");
+                })
+                .finally(function () {
+                    submitButton.disabled = false;
+                    submitButton.textContent = "إرسال الطلب";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
